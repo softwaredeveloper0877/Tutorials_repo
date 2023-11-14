@@ -1,0 +1,13 @@
+ync-log
+
+
+dosya çalıştığında SADECE BENİM "COMMİT MESAJLARIMI" en güncel olandan en eski olana doğru listele <>
+
+ex:
+
+1) -commit messajı- (son commit mesajı) ><
+.
+.
+.
+.
+x) -commit mesajı- (ilk commit mesajı) ><

@@ -1,0 +1,12 @@
+commit'lerini json formatında bir dosyada sakla
+
+json formatı alttaki şekilde olsun
+
+[
+	{
+    	"commitId":"asdfasdfa",
+    	"author":"sabandemirci@gmail.com",
+    	"message:"asdfasfdafas",
+    	"commitDate": "21/10/2023 15:22:50"
+	}
+]
