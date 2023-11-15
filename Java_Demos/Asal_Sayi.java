@@ -1,20 +1,16 @@
 public class Asal_Sayi{
     public static void main(String[] args){
-        int number = 25;
-        int remainder = number % 2;
-
+        int number = 0;
         boolean isPrime = true;
 
         for (int i = 2; i<number; i++){
-            if (number % 2 == 0){
+            if (number % i == 0){
                 isPrime = false;
             }
-
-            if (isPrime){
-                System.out.println("number is prime number");
-            }
-            else
-                System.out.println("number is not prime number");
         }
+            if (isPrime)
+                System.out.println("sayı asaldır");
+            else
+                System.out.println("sayı asal değildir");
     }
 }
