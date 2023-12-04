@@ -13,7 +13,7 @@ public class String_methods {
         System.out.println(deneme);
         System.out.println(message[0].indexOf("av")); // .indexOf() metodu verilen String içerisinde parametre olarak verilen string i String in başından başlayarak arar ve String i ilk bulduğu yerin başlangıç indisini döndürür.
         System.out.println(message[0].lastIndexOf("a")); // .lastIndexof() metodu verilen String içerisinde parametre olarak verilen karakteri String in sonundan başlayarak arar ve String i ilk bulduğu yerde başlangıca göre olan indisi döndürür.
-        System.out.println(message[0].replace("Bugun", "Yarin")); // .replace() metodu veriilen String in içerisinde parametre olarak verilenn String i arar ve bulduğunda yine parametre olarak verilen String ile değiştirir.
+        System.out.println(message[0].replace("Bugun", "") + "Yarin"); // .replace() metodu veriilen String in içerisinde parametre olarak verilenn String i arar ve bulduğunda yine parametre olarak verilen String ile değiştirir.
         System.out.println(message[0].substring(0, message[0].length())); // .substring() metodu verilen stringin parametre olarak verilen indislerin aralığındaki karakterleri alır.
 
         for (String kelime : message[0].split(" ")){

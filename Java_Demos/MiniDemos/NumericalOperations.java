@@ -1,5 +1,5 @@
 public class NumericalOperations {
-    public void operations(int number1, int number2) {
+    public static void operations(int number1, int number2) {
         String primeMessage = isPrimeNumber(number1);
         String primeMessage1 = isPrimeNumber(number2);
         String perfectMessage = isPerfectNumber(number1);
@@ -9,7 +9,7 @@ public class NumericalOperations {
         System.out.println(totalMessage);
     }
 
-    public String isPrimeNumber(int current_number) {
+    public static String isPrimeNumber(int current_number) {
         int counter = 0;
 
         do {
@@ -21,7 +21,7 @@ public class NumericalOperations {
         return ("Input number is prime number(" + current_number + ")");
     }
 
-    public String isPerfectNumber(int number) {
+    public static String isPerfectNumber(int number) {
         //perfect numbers
         // 6 -> 1,2,3 => 1+2+3 = 6
         //28 -> 1,2,4,7,14 => 1+2+4+7+14 = 28
@@ -39,7 +39,7 @@ public class NumericalOperations {
             return ("Input number is not perfect number(" + number + ')');
     }
 
-    public String isFriendsNumber(int number1, int number2) {
+    public static String isFriendsNumber(int number1, int number2) {
         int total1 = 0;
         int total2 = 0;
         if (number1 == number2) {
