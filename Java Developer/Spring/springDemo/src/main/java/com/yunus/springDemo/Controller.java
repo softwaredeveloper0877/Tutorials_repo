@@ -1,21 +1,31 @@
 package com.yunus.springDemo;
 
 import com.yunus.springDemo.DataAccess.JDBCUserInfoDAL;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import com.yunus.springDemo.Service.HTMLString;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/")
 public class Controller {
+    HTMLString htmlString = new HTMLString();
+    JDBCUserInfoDAL jdbcUserInfoDAL = new JDBCUserInfoDAL();
 
-    private final JDBCUserInfoDAL jdbcUserInfoDAL = new JDBCUserInfoDAL();
+    public Controller() throws Exception {
+    }
 
     @GetMapping("/")
     public String getUsers() throws Exception{
-       return jdbcUserInfoDAL.readTable();
+
+        return htmlString.getPageStatement();
     }
+
+    @PostMapping("/")
+    public String submitForm(@RequestParam("tel") String tel, @RequestParam("name") String name, @RequestParam("surname") String surname) throws Exception {
+
+        jdbcUserInfoDAL.insert("people(tel, name, surname)", "values("+tel+","+name+","+surname+")");
+
+        return htmlString.getPageStatement();
+    }
+
 }

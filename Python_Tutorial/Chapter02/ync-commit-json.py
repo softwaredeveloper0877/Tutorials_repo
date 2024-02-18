@@ -1,7 +1,7 @@
 import subprocess
 import json
 
-cmd = "git -C /home/muhtar/Desktop/Deneme_repo log --date=format:'%d/%m/%Y %H:%M:%S' -n2"
+cmd = "git -C /home/muhtar/Desktop/DENEME log --date=format:'%d/%m/%Y %H:%M:%S' -n2"
 output_bytes = subprocess.check_output(cmd, shell=True)
 output_text = output_bytes.decode("utf-8").split('\n')
 output_text = [line for line in output_text if line.strip()] #bu satır çıktı içerisindeki elemanların içeriğini kontrol eder. elemanın içerisinde boşluk ve '\n' ifadesinden başka bir şey yoksa bu elemanı boş kabul eder ve bu elemanı dışarda bırakır
